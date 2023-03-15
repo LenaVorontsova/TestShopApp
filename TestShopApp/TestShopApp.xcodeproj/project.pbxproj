@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68DE873F20FDAFC6597A7332 /* Pods_TestShopApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65754A3A40C2DEE14248B4A2 /* Pods_TestShopApp.framework */; };
 		84C3315729C2373600622496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315629C2373600622496 /* AppDelegate.swift */; };
 		84C3315929C2373600622496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315829C2373600622496 /* SceneDelegate.swift */; };
 		84C3315B29C2373600622496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315A29C2373600622496 /* ViewController.swift */; };
@@ -14,9 +15,12 @@
 		84C3316129C2373600622496 /* TestShopApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315F29C2373600622496 /* TestShopApp.xcdatamodeld */; };
 		84C3316329C2373800622496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316229C2373800622496 /* Assets.xcassets */; };
 		84C3316629C2373800622496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316429C2373800622496 /* LaunchScreen.storyboard */; };
+		84C3316F29C2394E00622496 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316E29C2394E00622496 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CA8B46CAE0069FFA1BFFCA2 /* Pods-TestShopApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestShopApp.release.xcconfig"; path = "Target Support Files/Pods-TestShopApp/Pods-TestShopApp.release.xcconfig"; sourceTree = "<group>"; };
+		65754A3A40C2DEE14248B4A2 /* Pods_TestShopApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestShopApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3315329C2373600622496 /* TestShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3315629C2373600622496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3315829C2373600622496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		84C3316229C2373800622496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C3316529C2373800622496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C3316729C2373800622496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C3316E29C2394E00622496 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		DB152144A0CDB15C6280B85F /* Pods-TestShopApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestShopApp.debug.xcconfig"; path = "Target Support Files/Pods-TestShopApp/Pods-TestShopApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DE873F20FDAFC6597A7332 /* Pods_TestShopApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12689B045BB1B8F17F6DCFD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65754A3A40C2DEE14248B4A2 /* Pods_TestShopApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26B59BDB4D38265E9588CD04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB152144A0CDB15C6280B85F /* Pods-TestShopApp.debug.xcconfig */,
+				3CA8B46CAE0069FFA1BFFCA2 /* Pods-TestShopApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84C3314A29C2373600622496 = {
 			isa = PBXGroup;
 			children = (
+				84C3316E29C2394E00622496 /* .swiftlint.yml */,
 				84C3315529C2373600622496 /* TestShopApp */,
 				84C3315429C2373600622496 /* Products */,
+				26B59BDB4D38265E9588CD04 /* Pods */,
+				12689B045BB1B8F17F6DCFD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C3316A29C2373800622496 /* Build configuration list for PBXNativeTarget "TestShopApp" */;
 			buildPhases = (
+				4FE8D6329E20F4A5E01905DB /* [CP] Check Pods Manifest.lock */,
 				84C3314F29C2373600622496 /* Sources */,
 				84C3315029C2373600622496 /* Frameworks */,
 				84C3315129C2373600622496 /* Resources */,
+				BDA770130ADDC3F2393AB831 /* [CP] Embed Pods Frameworks */,
+				84C3316D29C238D200622496 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C3316F29C2394E00622496 /* .swiftlint.yml in Resources */,
 				84C3316629C2373800622496 /* LaunchScreen.storyboard in Resources */,
 				84C3316329C2373800622496 /* Assets.xcassets in Resources */,
 				84C3315E29C2373600622496 /* Main.storyboard in Resources */,
@@ -135,6 +166,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FE8D6329E20F4A5E01905DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestShopApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84C3316D29C238D200622496 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		BDA770130ADDC3F2393AB831 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestShopApp/Pods-TestShopApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestShopApp/Pods-TestShopApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestShopApp/Pods-TestShopApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84C3314F29C2373600622496 /* Sources */ = {
@@ -286,6 +376,7 @@
 		};
 		84C3316B29C2373800622496 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB152144A0CDB15C6280B85F /* Pods-TestShopApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,8 +388,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +406,7 @@
 		};
 		84C3316C29C2373800622496 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA8B46CAE0069FFA1BFFCA2 /* Pods-TestShopApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,8 +418,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
