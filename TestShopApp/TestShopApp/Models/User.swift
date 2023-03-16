@@ -19,6 +19,6 @@ extension User {
         User(firstName: "Lena",
              secondName: "Vorontsova",
              email: "test@email.com",
-             password: "1234")
+             password: "123456")
     ]
 }
