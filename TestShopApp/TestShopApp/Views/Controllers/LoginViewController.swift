@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  TestShopApp
 //
 //  Created by Lena Vorontsova on 15.03.2023.
@@ -23,8 +23,7 @@ enum LoginConstants {
     static let loginBottom = 315
 }
 
-class ViewController: UIViewController {
-    var viewModel = LoginViewModel()
+class LoginViewController: UIViewController {
     private var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "Welcome back!"
@@ -58,6 +57,9 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    var viewModel: LoginViewModel?
+    var coordinator: AppCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +70,12 @@ class ViewController: UIViewController {
     
     @objc
     func logingButtonPressed() {
-        viewModel.loginButtonPressed(firstName: firstNameTextField.text ?? "",
-                                     password: passwordTextField.text ?? "")
+        viewModel!.loginButtonPressed(firstName: firstNameTextField.text ?? "",
+                                      password: passwordTextField.text ?? "")
+        if viewModel!.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel!.isLoggedIn
+            coordinator?.showTabBar(firstName: firstNameTextField.text ?? "")
+        }
     }
     
     private func configureConstraints() {
@@ -100,7 +106,7 @@ class ViewController: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.statusText.bind(listener: { statusText in
+        viewModel!.statusText.bind(listener: { statusText in
             DispatchQueue.main.async {
                 self.showAlert(message: statusText)
             }

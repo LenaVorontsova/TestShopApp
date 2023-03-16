@@ -9,16 +9,12 @@ import Foundation
 
 struct User {
     let firstName: String?
-    let secondName: String?
-    let email: String?
     let password: String?
 }
 
 extension User {
     static var users = [
         User(firstName: "Lena",
-             secondName: "Vorontsova",
-             email: "test@email.com",
              password: "123456")
     ]
 }
