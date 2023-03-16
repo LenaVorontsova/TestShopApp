@@ -14,6 +14,7 @@
 		84C3316329C2373800622496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316229C2373800622496 /* Assets.xcassets */; };
 		84C3316629C2373800622496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316429C2373800622496 /* LaunchScreen.storyboard */; };
 		84C3316F29C2394E00622496 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84C3316E29C2394E00622496 /* .swiftlint.yml */; };
+		84C3317529C2E5AC00622496 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317429C2E5AC00622496 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		84C3316529C2373800622496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C3316729C2373800622496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C3316E29C2394E00622496 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		84C3317429C2E5AC00622496 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB152144A0CDB15C6280B85F /* Pods-TestShopApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestShopApp.debug.xcconfig"; path = "Target Support Files/Pods-TestShopApp/Pods-TestShopApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,14 +83,47 @@
 		84C3315529C2373600622496 /* TestShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				84C3317229C2E55900622496 /* ViewModels */,
+				84C3317129C2E55400622496 /* Views */,
+				84C3317029C2E54C00622496 /* Models */,
 				84C3315629C2373600622496 /* AppDelegate.swift */,
-				84C3315A29C2373600622496 /* ViewController.swift */,
 				84C3316229C2373800622496 /* Assets.xcassets */,
 				84C3316429C2373800622496 /* LaunchScreen.storyboard */,
 				84C3316729C2373800622496 /* Info.plist */,
 				84C3315F29C2373600622496 /* TestShopApp.xcdatamodeld */,
 			);
 			path = TestShopApp;
+			sourceTree = "<group>";
+		};
+		84C3317029C2E54C00622496 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C3317429C2E5AC00622496 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84C3317129C2E55400622496 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84C3317329C2E56700622496 /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84C3317229C2E55900622496 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84C3317329C2E56700622496 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C3315A29C2373600622496 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C3317529C2E5AC00622496 /* User.swift in Sources */,
 				84C3315B29C2373600622496 /* ViewController.swift in Sources */,
 				84C3315729C2373600622496 /* AppDelegate.swift in Sources */,
 				84C3316129C2373600622496 /* TestShopApp.xcdatamodeld in Sources */,
