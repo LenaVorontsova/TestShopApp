@@ -61,8 +61,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // bindViewModel()
+        bindViewModel()
         configureConstraints()
+        logingButton.addTarget(self, action: #selector(logingButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc
+    func logingButtonPressed() {
+        viewModel.loginButtonPressed(firstName: firstNameTextField.text ?? "",
+                                     password: passwordTextField.text ?? "")
     }
     
     private func configureConstraints() {
@@ -93,10 +100,18 @@ class ViewController: UIViewController {
     }
     
     func bindViewModel() {
-//        viewModel.statusText.bind(listener: { statusText in
-//            DispatchQueue.main.async {
-//                // self.label.text = statusText
-//            }
-//        })
+        viewModel.statusText.bind(listener: { statusText in
+            DispatchQueue.main.async {
+                self.showAlert(message: statusText)
+            }
+        })
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Status",
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        self.present(alert, animated: false)
     }
 }
