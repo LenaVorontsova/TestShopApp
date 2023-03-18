@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
     }()
     
     var viewModel: LoginViewModel?
-    var coordinator: AppCoordinator?
+    weak var coordinator: AppCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

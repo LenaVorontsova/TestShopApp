@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		68DE873F20FDAFC6597A7332 /* Pods_TestShopApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65754A3A40C2DEE14248B4A2 /* Pods_TestShopApp.framework */; };
+		845B6FFF29C5F973000275BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B6FFE29C5F973000275BE /* SignInViewController.swift */; };
+		845B700129C5FA26000275BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700029C5FA26000275BE /* DetailViewController.swift */; };
+		845B700329C5FADF000275BE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700229C5FADF000275BE /* SignInViewModel.swift */; };
+		845B700529C5FAED000275BE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700429C5FAED000275BE /* DetailViewModel.swift */; };
 		84C3315729C2373600622496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315629C2373600622496 /* AppDelegate.swift */; };
 		84C3315B29C2373600622496 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315A29C2373600622496 /* LoginViewController.swift */; };
 		84C3316129C2373600622496 /* TestShopApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315F29C2373600622496 /* TestShopApp.xcdatamodeld */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		3CA8B46CAE0069FFA1BFFCA2 /* Pods-TestShopApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestShopApp.release.xcconfig"; path = "Target Support Files/Pods-TestShopApp/Pods-TestShopApp.release.xcconfig"; sourceTree = "<group>"; };
 		65754A3A40C2DEE14248B4A2 /* Pods_TestShopApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestShopApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		845B6FFE29C5F973000275BE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		845B700029C5FA26000275BE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		845B700229C5FADF000275BE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		845B700429C5FAED000275BE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		84C3315329C2373600622496 /* TestShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3315629C2373600622496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3315A29C2373600622496 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 				84C3317929C2E9E200622496 /* LoginViewModel.swift */,
 				84C3318B29C31E0200622496 /* FirstPageViewModel.swift */,
 				84C3318D29C31E2A00622496 /* ProfileViewModel.swift */,
+				845B700229C5FADF000275BE /* SignInViewModel.swift */,
+				845B700429C5FAED000275BE /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +158,8 @@
 				84C3317B29C316F300622496 /* TabBarViewController.swift */,
 				84C3317D29C3175600622496 /* ProfileViewController.swift */,
 				84C3317F29C318B200622496 /* FirstPageViewController.swift */,
+				845B6FFE29C5F973000275BE /* SignInViewController.swift */,
+				845B700029C5FA26000275BE /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,9 +328,13 @@
 				84C3318C29C31E0200622496 /* FirstPageViewModel.swift in Sources */,
 				84C3317A29C2E9E200622496 /* LoginViewModel.swift in Sources */,
 				84C3318E29C31E2A00622496 /* ProfileViewModel.swift in Sources */,
+				845B700129C5FA26000275BE /* DetailViewController.swift in Sources */,
 				84C3315B29C2373600622496 /* LoginViewController.swift in Sources */,
+				845B700329C5FADF000275BE /* SignInViewModel.swift in Sources */,
+				845B6FFF29C5F973000275BE /* SignInViewController.swift in Sources */,
 				84C3318929C31D1200622496 /* UserData.swift in Sources */,
 				84C3317C29C316F300622496 /* TabBarViewController.swift in Sources */,
+				845B700529C5FAED000275BE /* DetailViewModel.swift in Sources */,
 				84C3315729C2373600622496 /* AppDelegate.swift in Sources */,
 				84C3318029C318B200622496 /* FirstPageViewController.swift in Sources */,
 				84C3317E29C3175600622496 /* ProfileViewController.swift in Sources */,

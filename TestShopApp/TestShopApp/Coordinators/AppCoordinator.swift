@@ -36,11 +36,21 @@ class AppCoordinator: Coordinator {
         firstViewModel.firstName = firstName
         let profileViewModel = ProfileViewModel()
         profileViewModel.firstName = firstName
-        let tabBarVC = TabBarViewController(firstViewModel: firstViewModel,
-                                            profileViewModel: profileViewModel,
-                                            coordinator: self)
+        let tabBarVC = TabBarViewController()
+        tabBarVC.firstViewModel = firstViewModel
+        tabBarVC.profileViewModel = profileViewModel
+        tabBarVC.coordinator = self
         tabBarVC.modalPresentationStyle = .fullScreen
         // navigationController.viewControllers.removeAll()
         navigationController.pushViewController(tabBarVC, animated: false)
+    }
+    
+    func showSignIn() {
+    }
+    
+    func showFirstPage() {
+    }
+    
+    func showDetails() {
     }
 }

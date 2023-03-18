@@ -9,22 +9,22 @@ import UIKit
 import SnapKit
 
 final class TabBarViewController: UITabBarController {
-    var coordinator: AppCoordinator?
+    weak var coordinator: AppCoordinator?
     var firstViewModel: FirstPageViewModel?
     var profileViewModel: ProfileViewModel?
     
-    init(firstViewModel: FirstPageViewModel,
-         profileViewModel: ProfileViewModel,
-         coordinator: AppCoordinator) {
-        self.firstViewModel = firstViewModel
-        self.profileViewModel = profileViewModel
-        self.coordinator = coordinator
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    init(firstViewModel: FirstPageViewModel,
+//         profileViewModel: ProfileViewModel,
+//         coordinator: AppCoordinator) {
+//        self.firstViewModel = firstViewModel
+//        self.profileViewModel = profileViewModel
+//        self.coordinator = coordinator
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +33,8 @@ final class TabBarViewController: UITabBarController {
     
     private func createTabBar() {
         UITabBar.appearance().backgroundColor = .white
-        let profileVC = UINavigationController(rootViewController: ProfileViewController(
-            viewModel: profileViewModel!,
-            coordinator: coordinator!))
-        let firstPageVC = UINavigationController(rootViewController: FirstPageViewController(
-            viewModel: firstViewModel!,
-            coordinator: coordinator!))
+        let profileVC = UINavigationController(rootViewController: ProfileViewController())
+        let firstPageVC = UINavigationController(rootViewController: FirstPageViewController())
         profileVC.title = "Profile"
         self.setViewControllers([profileVC, firstPageVC], animated: false)
         guard let items = self.tabBar.items else {
