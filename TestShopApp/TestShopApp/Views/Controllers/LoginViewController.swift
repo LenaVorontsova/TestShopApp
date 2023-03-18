@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 enum LoginConstants {
+    static let signInTitleTop = 156
     static let titleTop = 159
     static let titleInset = 100
     
@@ -21,13 +22,15 @@ enum LoginConstants {
     static let loginTop = 100
     static let loginInset = 43
     static let loginBottom = 315
+    
+    static let signInTop = 35
 }
 
 class LoginViewController: UIViewController {
     private var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "Welcome back!"
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.font = .systemFont(ofSize: 40, weight: .bold)
         label.textColor = .black
         return label
     }()

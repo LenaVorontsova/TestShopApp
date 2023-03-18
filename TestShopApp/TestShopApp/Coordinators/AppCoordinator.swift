@@ -19,16 +19,18 @@ class AppCoordinator: Coordinator {
         if isLoggedIn {
             showTabBar(firstName: UserData.users[0].firstName!)
         } else {
-             showLogin()
+            showSignIn()
+             //showLogin()
         }
     }
     
     func showLogin() {
         let vc = LoginViewController()
-        navigationController.pushViewController(vc, animated: false)
-        vc.viewModel = LoginViewModel()
+        let viewModel = LoginViewModel()
+        vc.viewModel = viewModel
         vc.viewModel?.isLoggedIn = isLoggedIn
         vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func showTabBar(firstName: String) {
@@ -46,11 +48,27 @@ class AppCoordinator: Coordinator {
     }
     
     func showSignIn() {
+        let viewModel = SignInViewModel()
+        let vc = SignInViewController()
+        vc.viewModel = viewModel
+        viewModel.model = UserData.users[0]
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func showFirstPage() {
+        let viewModel = FirstPageViewModel()
+        let vc = FirstPageViewController()
+        vc.viewModel = viewModel
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func showDetails() {
+        let viewModel = DetailViewModel()
+        let vc = DetailViewController()
+        vc.viewModel = viewModel
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
 }
