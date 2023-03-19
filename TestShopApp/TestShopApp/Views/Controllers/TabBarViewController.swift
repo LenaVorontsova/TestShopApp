@@ -10,22 +10,9 @@ import SnapKit
 
 final class TabBarViewController: UITabBarController {
     weak var coordinator: AppCoordinator?
-    var firstViewModel: FirstPageViewModel?
+    var firstViewModel: HomePageViewModel?
     var profileViewModel: ProfileViewModel?
-    
-//    init(firstViewModel: FirstPageViewModel,
-//         profileViewModel: ProfileViewModel,
-//         coordinator: AppCoordinator) {
-//        self.firstViewModel = firstViewModel
-//        self.profileViewModel = profileViewModel
-//        self.coordinator = coordinator
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         createTabBar()
@@ -34,13 +21,15 @@ final class TabBarViewController: UITabBarController {
     private func createTabBar() {
         UITabBar.appearance().backgroundColor = .white
         let profileVC = UINavigationController(rootViewController: ProfileViewController())
-        let firstPageVC = UINavigationController(rootViewController: FirstPageViewController())
-        profileVC.title = "Profile"
-        self.setViewControllers([profileVC, firstPageVC], animated: false)
+        let homePageVC = UINavigationController(rootViewController: HomePageViewController())
+        let likedVC = UINavigationController(rootViewController: LikedPageViewController())
+        let shoppingVC = UINavigationController(rootViewController: ShoppingCartViewController())
+        let messagesVC = UINavigationController(rootViewController: MessagesViewController())
+        self.setViewControllers([homePageVC, likedVC, shoppingVC, messagesVC, profileVC], animated: false)
         guard let items = self.tabBar.items else {
             return
         }
-        let imagesNames = ["person", "house"]
+        let imagesNames = ["house", "heart", "cart", "message", "person"]
         for i in 0..<items.count {
             items[i].image = UIImage(systemName: imagesNames[i])
         }

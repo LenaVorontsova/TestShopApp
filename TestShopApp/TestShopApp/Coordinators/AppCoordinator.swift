@@ -34,7 +34,7 @@ class AppCoordinator: Coordinator {
     }
     
     func showTabBar(firstName: String) {
-        let firstViewModel = FirstPageViewModel()
+        let firstViewModel = HomePageViewModel()
         firstViewModel.firstName = firstName
         let profileViewModel = ProfileViewModel()
         profileViewModel.firstName = firstName
@@ -56,9 +56,9 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func showFirstPage() {
-        let viewModel = FirstPageViewModel()
-        let vc = FirstPageViewController()
+    func showHomePage() {
+        let viewModel = HomePageViewModel()
+        let vc = HomePageViewController()
         vc.viewModel = viewModel
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)

@@ -13,6 +13,9 @@
 		845B700329C5FADF000275BE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700229C5FADF000275BE /* SignInViewModel.swift */; };
 		845B700529C5FAED000275BE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700429C5FAED000275BE /* DetailViewModel.swift */; };
 		845B700829C7323F000275BE /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700729C7323F000275BE /* LoginConstants.swift */; };
+		845B700A29C73BA0000275BE /* LikedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700929C73BA0000275BE /* LikedPageViewController.swift */; };
+		845B700D29C73C37000275BE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700C29C73C37000275BE /* ShoppingCartViewController.swift */; };
+		845B700F29C73C7E000275BE /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B700E29C73C7E000275BE /* MessagesViewController.swift */; };
 		84C3315729C2373600622496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315629C2373600622496 /* AppDelegate.swift */; };
 		84C3315B29C2373600622496 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315A29C2373600622496 /* LoginViewController.swift */; };
 		84C3316129C2373600622496 /* TestShopApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C3315F29C2373600622496 /* TestShopApp.xcdatamodeld */; };
@@ -23,11 +26,11 @@
 		84C3317A29C2E9E200622496 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317929C2E9E200622496 /* LoginViewModel.swift */; };
 		84C3317C29C316F300622496 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317B29C316F300622496 /* TabBarViewController.swift */; };
 		84C3317E29C3175600622496 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317D29C3175600622496 /* ProfileViewController.swift */; };
-		84C3318029C318B200622496 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317F29C318B200622496 /* FirstPageViewController.swift */; };
+		84C3318029C318B200622496 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3317F29C318B200622496 /* HomePageViewController.swift */; };
 		84C3318529C319A800622496 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318429C319A800622496 /* Coordinator.swift */; };
 		84C3318729C31A1900622496 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318629C31A1900622496 /* AppCoordinator.swift */; };
 		84C3318929C31D1200622496 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318829C31D1200622496 /* UserData.swift */; };
-		84C3318C29C31E0200622496 /* FirstPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318B29C31E0200622496 /* FirstPageViewModel.swift */; };
+		84C3318C29C31E0200622496 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318B29C31E0200622496 /* HomePageViewModel.swift */; };
 		84C3318E29C31E2A00622496 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C3318D29C31E2A00622496 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		845B700229C5FADF000275BE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		845B700429C5FAED000275BE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		845B700729C7323F000275BE /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		845B700929C73BA0000275BE /* LikedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPageViewController.swift; sourceTree = "<group>"; };
+		845B700C29C73C37000275BE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		845B700E29C73C7E000275BE /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		84C3315329C2373600622496 /* TestShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C3315629C2373600622496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C3315A29C2373600622496 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -51,11 +57,11 @@
 		84C3317929C2E9E200622496 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		84C3317B29C316F300622496 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		84C3317D29C3175600622496 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		84C3317F29C318B200622496 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		84C3317F29C318B200622496 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		84C3318429C319A800622496 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		84C3318629C31A1900622496 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		84C3318829C31D1200622496 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		84C3318B29C31E0200622496 /* FirstPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewModel.swift; sourceTree = "<group>"; };
+		84C3318B29C31E0200622496 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		84C3318D29C31E2A00622496 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DB152144A0CDB15C6280B85F /* Pods-TestShopApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestShopApp.debug.xcconfig"; path = "Target Support Files/Pods-TestShopApp/Pods-TestShopApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +101,17 @@
 				845B700729C7323F000275BE /* LoginConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		845B700B29C73BA4000275BE /* EmptyPages */ = {
+			isa = PBXGroup;
+			children = (
+				845B700029C5FA26000275BE /* DetailViewController.swift */,
+				845B700929C73BA0000275BE /* LikedPageViewController.swift */,
+				845B700C29C73C37000275BE /* ShoppingCartViewController.swift */,
+				845B700E29C73C7E000275BE /* MessagesViewController.swift */,
+			);
+			path = EmptyPages;
 			sourceTree = "<group>";
 		};
 		84C3314A29C2373600622496 = {
@@ -154,7 +171,7 @@
 			children = (
 				84C3317629C2E8A300622496 /* Bindings */,
 				84C3317929C2E9E200622496 /* LoginViewModel.swift */,
-				84C3318B29C31E0200622496 /* FirstPageViewModel.swift */,
+				84C3318B29C31E0200622496 /* HomePageViewModel.swift */,
 				84C3318D29C31E2A00622496 /* ProfileViewModel.swift */,
 				845B700229C5FADF000275BE /* SignInViewModel.swift */,
 				845B700429C5FAED000275BE /* DetailViewModel.swift */,
@@ -165,12 +182,12 @@
 		84C3317329C2E56700622496 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845B700B29C73BA4000275BE /* EmptyPages */,
 				84C3315A29C2373600622496 /* LoginViewController.swift */,
 				84C3317B29C316F300622496 /* TabBarViewController.swift */,
 				84C3317D29C3175600622496 /* ProfileViewController.swift */,
-				84C3317F29C318B200622496 /* FirstPageViewController.swift */,
+				84C3317F29C318B200622496 /* HomePageViewController.swift */,
 				845B6FFE29C5F973000275BE /* SignInViewController.swift */,
-				845B700029C5FA26000275BE /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,9 +353,11 @@
 				84C3317529C2E5AC00622496 /* User.swift in Sources */,
 				84C3317829C2E8B400622496 /* Dynamic.swift in Sources */,
 				84C3318529C319A800622496 /* Coordinator.swift in Sources */,
-				84C3318C29C31E0200622496 /* FirstPageViewModel.swift in Sources */,
+				84C3318C29C31E0200622496 /* HomePageViewModel.swift in Sources */,
+				845B700A29C73BA0000275BE /* LikedPageViewController.swift in Sources */,
 				84C3317A29C2E9E200622496 /* LoginViewModel.swift in Sources */,
 				84C3318E29C31E2A00622496 /* ProfileViewModel.swift in Sources */,
+				845B700D29C73C37000275BE /* ShoppingCartViewController.swift in Sources */,
 				845B700129C5FA26000275BE /* DetailViewController.swift in Sources */,
 				84C3315B29C2373600622496 /* LoginViewController.swift in Sources */,
 				845B700329C5FADF000275BE /* SignInViewModel.swift in Sources */,
@@ -348,8 +367,9 @@
 				845B700829C7323F000275BE /* LoginConstants.swift in Sources */,
 				845B700529C5FAED000275BE /* DetailViewModel.swift in Sources */,
 				84C3315729C2373600622496 /* AppDelegate.swift in Sources */,
-				84C3318029C318B200622496 /* FirstPageViewController.swift in Sources */,
+				84C3318029C318B200622496 /* HomePageViewController.swift in Sources */,
 				84C3317E29C3175600622496 /* ProfileViewController.swift in Sources */,
+				845B700F29C73C7E000275BE /* MessagesViewController.swift in Sources */,
 				84C3316129C2373600622496 /* TestShopApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
