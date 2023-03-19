@@ -51,6 +51,22 @@ final class SignInViewController: UIViewController {
         button.layer.cornerRadius = 10
         return button
     }()
+    private var questionLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Already have an account?"
+        label.font = .systemFont(ofSize: 10, weight: .thin)
+        label.textColor = UIColor(red: 0.502, green: 0.502, blue: 0.502, alpha: 1)
+        return label
+    }()
+    private var logInButton: UIButton = {
+        var button = UIButton()
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(UIColor(red: 0.145, green: 0.31, blue: 0.902, alpha: 1),
+                             for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 10)
+        button.titleLabel?.textAlignment = .left
+        return button
+    }()
     weak var coordinator: AppCoordinator?
     var viewModel: SignInViewModel?
     
@@ -59,6 +75,7 @@ final class SignInViewController: UIViewController {
         view.backgroundColor = .blue
         configureConstraints()
         signInButton.addTarget(self, action: #selector(signInButtonPressed), for: .touchUpInside)
+        logInButton.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
     }
     
     @objc
@@ -70,6 +87,11 @@ final class SignInViewController: UIViewController {
         coordinator?.showTabBar(firstName: firstNameTextField.text!)
     }
     
+    @objc
+    func logInButtonPressed() {
+        coordinator?.showLogin()
+    }
+    
     private func configureConstraints() {
         view.backgroundColor = .white
         view.addSubview(titleLabel)
@@ -77,6 +99,8 @@ final class SignInViewController: UIViewController {
         view.addSubview(lastNameTextField)
         view.addSubview(emailTextField)
         view.addSubview(signInButton)
+        view.addSubview(questionLabel)
+        view.addSubview(logInButton)
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(LoginConstants.signInTitleTop)
             $0.leading.trailing.equalToSuperview().inset(LoginConstants.titleInset)
@@ -99,6 +123,16 @@ final class SignInViewController: UIViewController {
         signInButton.snp.makeConstraints {
             $0.top.equalTo(emailTextField.snp.bottom).offset(LoginConstants.signInTop)
             $0.leading.trailing.equalToSuperview().inset(LoginConstants.loginInset)
+        }
+        questionLabel.snp.makeConstraints {
+            $0.top.equalTo(signInButton.snp.bottom).offset(LoginConstants.questionTop)
+            $0.leading.equalToSuperview().inset(LoginConstants.loginInset)
+            $0.bottom.equalToSuperview().inset(LoginConstants.loginBottom)
+        }
+        logInButton.snp.makeConstraints {
+            $0.top.equalTo(signInButton.snp.bottom).offset(LoginConstants.questionTop)
+            $0.leading.equalTo(questionLabel.snp.trailing).offset(LoginConstants.logLead)
+            $0.trailing.equalToSuperview().inset(LoginConstants.questionTrailling)
             $0.bottom.equalToSuperview().inset(LoginConstants.loginBottom)
         }
     }

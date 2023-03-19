@@ -21,16 +21,19 @@ enum LoginConstants {
     
     static let loginTop = 100
     static let loginInset = 43
-    static let loginBottom = 315
+    static let loginBottom = 288
+    static let questionTrailling = 169
+    static let logLead = 9
     
     static let signInTop = 35
+    static let questionTop = 18
 }
 
 class LoginViewController: UIViewController {
     private var titleLabel: UILabel = {
         var label = UILabel()
         label.text = "Welcome back!"
-        label.font = .systemFont(ofSize: 40, weight: .bold)
+        label.font = .systemFont(ofSize: 26, weight: .bold)
         label.textColor = .black
         return label
     }()
