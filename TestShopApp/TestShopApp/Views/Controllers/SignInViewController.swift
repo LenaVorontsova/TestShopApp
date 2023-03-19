@@ -58,6 +58,16 @@ final class SignInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
         configureConstraints()
+        signInButton.addTarget(self, action: #selector(signInButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc
+    func signInButtonPressed() {
+        let user = UserData(firstName: firstNameTextField.text,
+                            secondName: lastNameTextField.text,
+                            email: emailTextField.text)
+        viewModel?.model = user
+        coordinator?.showTabBar(firstName: firstNameTextField.text!)
     }
     
     private func configureConstraints() {
