@@ -67,6 +67,33 @@ final class SignInViewController: UIViewController {
         button.titleLabel?.textAlignment = .left
         return button
     }()
+    private var googleButton: UIButton = {
+        var button = UIButton()
+        button.setImage(UIImage(named: "googleIcon"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        return button
+    }()
+    private var appleButton: UIButton = {
+        var button = UIButton()
+        button.setImage(UIImage(named: "appleIcon"), for: .normal)
+        button.imageView?.contentMode = .scaleToFill
+        return button
+    }()
+    private var googleLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Sign in with Google"
+        label.font = .systemFont(ofSize: 11, weight: .medium)
+        label.textColor = .black
+        return label
+    }()
+    private var appleLabel: UILabel = {
+        var label = UILabel()
+        label.text = "Sign in with Apple"
+        label.font = .systemFont(ofSize: 11, weight: .medium)
+        label.textColor = .black
+        return label
+    }()
+    
     weak var coordinator: AppCoordinator?
     var viewModel: SignInViewModel?
     
@@ -101,6 +128,10 @@ final class SignInViewController: UIViewController {
         view.addSubview(signInButton)
         view.addSubview(questionLabel)
         view.addSubview(logInButton)
+        view.addSubview(googleButton)
+        view.addSubview(googleLabel)
+        view.addSubview(appleButton)
+        view.addSubview(appleLabel)
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(LoginConstants.signInTitleTop)
             $0.leading.trailing.equalToSuperview().inset(LoginConstants.titleInset)
@@ -127,13 +158,32 @@ final class SignInViewController: UIViewController {
         questionLabel.snp.makeConstraints {
             $0.top.equalTo(signInButton.snp.bottom).offset(LoginConstants.questionTop)
             $0.leading.equalToSuperview().inset(LoginConstants.loginInset)
-            $0.bottom.equalToSuperview().inset(LoginConstants.loginBottom)
         }
         logInButton.snp.makeConstraints {
-            $0.top.equalTo(signInButton.snp.bottom).offset(LoginConstants.questionTop)
+            $0.top.equalTo(signInButton.snp.bottom).offset(LoginConstants.buttonTop)
             $0.leading.equalTo(questionLabel.snp.trailing).offset(LoginConstants.logLead)
             $0.trailing.equalToSuperview().inset(LoginConstants.questionTrailling)
-            $0.bottom.equalToSuperview().inset(LoginConstants.loginBottom)
+        }
+        googleButton.snp.makeConstraints {
+            $0.top.equalTo(questionLabel.snp.bottom).offset(LoginConstants.googleTop)
+            $0.leading.equalToSuperview().inset(LoginConstants.googleLead)
+        }
+        googleLabel.snp.makeConstraints {
+            $0.top.equalTo(logInButton.snp.bottom).offset(LoginConstants.googleTextTop)
+            $0.leading.equalTo(googleButton.snp.trailing).offset(LoginConstants.googleTextLead)
+            $0.trailing.equalToSuperview().inset(LoginConstants.googleTextTrail)
+        }
+        appleButton.snp.makeConstraints {
+            $0.top.equalTo(googleButton.snp.bottom).offset(LoginConstants.appleTop)
+            $0.leading.equalToSuperview().inset(LoginConstants.appleLead)
+            $0.trailing.equalToSuperview().inset(LoginConstants.googleTrail)
+            $0.bottom.equalToSuperview().inset(LoginConstants.appleBottom)
+        }
+        appleLabel.snp.makeConstraints {
+            $0.top.equalTo(googleLabel.snp.bottom).offset(LoginConstants.appleTextTop)
+            $0.leading.equalTo(appleButton.snp.trailing).offset(LoginConstants.appleTextLead)
+            $0.trailing.equalToSuperview().inset(LoginConstants.appleTextTrail)
+            $0.bottom.equalToSuperview().inset(LoginConstants.appleTextBottom)
         }
     }
 }

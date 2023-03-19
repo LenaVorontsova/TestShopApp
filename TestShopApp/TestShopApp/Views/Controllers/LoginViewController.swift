@@ -8,27 +8,6 @@
 import UIKit
 import SnapKit
 
-enum LoginConstants {
-    static let signInTitleTop = 156
-    static let titleTop = 159
-    static let titleInset = 100
-    
-    static let fnTop = 80
-    static let nameInset = 42
-    static let nameHeight = 30
-    
-    static let snTop = 35
-    
-    static let loginTop = 100
-    static let loginInset = 43
-    static let loginBottom = 288
-    static let questionTrailling = 169
-    static let logLead = 9
-    
-    static let signInTop = 35
-    static let questionTop = 18
-}
-
 class LoginViewController: UIViewController {
     private var titleLabel: UILabel = {
         var label = UILabel()
