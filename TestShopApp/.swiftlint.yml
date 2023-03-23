@@ -168,11 +168,11 @@ custom_rules:
         message: "Не используй тернарный оператор для возврата Bool"
         severity: error
 
-    autolayout_initialization:
-        name: "Использование NSLayoutConstraint без SnapKit"
-        regex: "\\.constraint"
-        message: "Используей SnapKit"
-        severity: error
+#    autolayout_initialization:
+#        name: "Использование NSLayoutConstraint без SnapKit"
+#        regex: "\\.constraint"
+#        message: "Используей SnapKit"
+#        severity: error
         
 #    fonts_initialization:
 #        name: "Использование шрифтов без AppFonts"

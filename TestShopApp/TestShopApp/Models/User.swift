@@ -14,7 +14,7 @@ struct User {
 
 extension User {
     static var users = [
-        User(firstName: "Lena",
+        User(firstName: "Satria",
              password: "123456")
     ]
 }

@@ -15,8 +15,8 @@ struct UserData {
 
 extension UserData {
     static var users = [
-        UserData(firstName: "Lena",
-                 secondName: "Vorontsova",
+        UserData(firstName: "Satria",
+                 secondName: "Adhi Pradana",
                  email: "test@email.com")
     ]
 }

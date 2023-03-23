@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         textField.backgroundColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 1)
         textField.placeholder = "First name"
         textField.textAlignment = .center
+        textField.text = "Satria"
         textField.textColor = .black
         textField.layer.cornerRadius = 5
         return textField
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController {
         textField.backgroundColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 1)
         textField.placeholder = "Password"
         textField.textAlignment = .center
+        textField.text = "123456"
         textField.textColor = .black
         textField.layer.cornerRadius = 5
         return textField
