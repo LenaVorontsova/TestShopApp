@@ -17,10 +17,10 @@ enum ProfileConstants {
     static let nameTop = 19
     static let nameOffset = 120
     
-    static let uploadTop = 37
-    static let uploadImageTop = 7
+    static let uploadTop = 20
     static let uploadOffset = 42
-    static let uploadImageLead = 50
-    static let uploadImageTrail = 226
-    static let uploadBottom = 500
+    static let uploadHeight = 40
+    
+    static let stackTop = 10
+    static let stackOther = 0
 }
