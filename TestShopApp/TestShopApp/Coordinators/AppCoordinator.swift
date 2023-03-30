@@ -43,7 +43,7 @@ class AppCoordinator: Coordinator {
         tabBarVC.profileViewModel = profileViewModel
         tabBarVC.coordinator = self
         tabBarVC.modalPresentationStyle = .fullScreen
-        // navigationController.viewControllers.removeAll()
+        navigationController.viewControllers.removeAll()
         navigationController.pushViewController(tabBarVC, animated: false)
     }
     
